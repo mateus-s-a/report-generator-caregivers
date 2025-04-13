@@ -156,6 +156,7 @@ label {
 input[type="text"],
 input[type="date"],
 input[type="time"],
+input[type="number"],
 select,
 textarea {
     width: 100%;
@@ -282,6 +283,7 @@ textarea {
     background-color: var(--color-primary);
     color: white;
     border-color: var(--color-primary);
+    transform: scale(1.05);
 }
 
 .form-actions {
@@ -297,22 +299,13 @@ textarea {
     overflow: hidden;
 }
 
-.btn-download:after, .btn-save:after {
-    content: "";
+.ripple {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-    border-radius: 100%;
-    transform: scale(1, 1) translate(-50%);
-    transform-origin: 50% 50%;
-}
-
-.btn-download:focus:not(:active)::after, .btn-save:focus:not(:active)::after {
-    animation: ripple 1s ease-out;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    pointer-events: none;
 }
 
 /* ========== HORÁRIOS E SELEÇÃO ========== */
@@ -336,6 +329,16 @@ textarea {
     border-top: 1px dashed var(--color-border);
 }
 
+.selected-times-preview {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+    background-color: rgba(58, 123, 213, 0.05);
+    border-radius: var(--border-radius-sm);
+    min-height: 30px;
+}
+
 /* ========== MODAIS ========== */
 .modal {
     display: none;
@@ -348,7 +351,8 @@ textarea {
     z-index: 1000;
     overflow-y: auto;
     backdrop-filter: blur(5px);
-    animation: fadeIn 0.3s ease-out;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
 }
 
 .modal-content {
@@ -437,6 +441,14 @@ textarea {
     word-break: break-word;
 }
 
+.sinais-vitais-details {
+    margin-top: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background-color: rgba(52, 152, 219, 0.1);
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-sm);
+}
+
 /* Botões do card de evento */
 .evento-acoes {
     position: absolute;
@@ -486,6 +498,22 @@ textarea {
     color: white;
     transform: scale(1.1);
     box-shadow: var(--box-shadow-md);
+}
+
+/* Estilos para os inputs de sinais vitais */
+.pressao-arterial-inputs {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.pressao-arterial-inputs input {
+    flex: 1;
+}
+
+.pressao-arterial-inputs span {
+    font-weight: bold;
+    color: var(--color-text);
 }
 
 /* ========== FOOTER ========== */
