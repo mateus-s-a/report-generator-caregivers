@@ -1,6 +1,9 @@
 # report-generator-caregivers
-Report generator for elderly caregivers.
+Gerador de relatórios para cuidadores de idosos.
 
 
-Still in development...
-The focus it's in the Backend login page plans.
+Ainda em desenvolvimento...
+O foco está nos planos da página de login do back-end.
+
+Projeto com auxiliar da plataforma InfinityFree para hospedagem e manuseio de banco de dados para a criação para sistema de login-logout.
+URL: relatorioscuidadores.rf.gd
