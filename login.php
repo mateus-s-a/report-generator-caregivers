@@ -60,13 +60,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             
                             // armazenar dados em variáveis de sessão
                             $_SESSION["loggedin"] = true;
+                            $_SESSION["user_ip"] = $_SERVER["REMOTE_ADDR"];
+                            $_SESSION["user_agent"] = $_SERVER["HTTP_USER_AGENT"];
                             $_SESSION["id"] = $id;
                             $_SESSION["user_id"] = $user_id;
                             $_SESSION["nome"] = $nome;
                             $_SESSION["email"] = $email;                            
                             
                             // redirecionar o usuário para a página de boas-vindas
-                            header("location: index.html");
+                            header("location: index.php");
                         } else {
                             // senha não é válida, mostrar mensagem de erro genérica
                             $login_err = "Email ou senha inválidos.";

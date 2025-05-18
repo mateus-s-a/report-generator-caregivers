@@ -649,3 +649,18 @@ footer {
         height: 30px;
     }
 }
+
+.user-bar {
+    background: #f8f9fa;
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+}
+
+.logout-btn {
+    background: #ffc107;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 4px;
+    margin-left: 10px;
+}
