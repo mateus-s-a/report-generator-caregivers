@@ -2,7 +2,7 @@
 // informações do banco de dados
 define('DB_SERVER', 'sql208.infinityfree.com');
 define('DB_USERNAME', 'if0_38742417');
-define('DB_PASSWORD', 'l8xN8CSKUIfQ');
+define('DB_PASSWORD', 'db_password');
 define('DB_NAME', 'if0_38742417_db_relatorio_cuidador_idosos');
 
 // conectando ao banco de dados
